@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -514,14 +515,11 @@ position = Vector2( 120, 48 )
 [node name="Bush" parent="YSort/Bushes" instance=ExtResource( 2 )]
 position = Vector2( 192, 16 )
 
-[node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 2 )]
-position = Vector2( 64, 104 )
-
 [node name="Bush3" parent="YSort/Bushes" instance=ExtResource( 2 )]
 position = Vector2( 224, 32 )
 
 [node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 2 )]
-position = Vector2( 216, 104 )
+position = Vector2( 185, 101 )
 
 [node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 2 )]
 position = Vector2( 136, 152 )
@@ -594,13 +592,29 @@ position = Vector2( 88, 0 )
 [node name="Grass20" parent="YSort/Grasses" instance=ExtResource( 6 )]
 position = Vector2( 8, 104 )
 
-[node name="Bat" parent="YSort" instance=ExtResource( 7 )]
+[node name="Trees" type="YSort" parent="YSort"]
+
+[node name="Tree" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 43.3957, 155.093 )
+
+[node name="Tree2" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 240.752, 150.187 )
+
+[node name="Tree3" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 276.978, 6.41502 )
+
+[node name="Tree4" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 64.0558, 105.773 )
+
+[node name="Bats" type="YSort" parent="YSort"]
+
+[node name="Bat" parent="YSort/Bats" instance=ExtResource( 7 )]
 position = Vector2( 248, 40 )
 
-[node name="Bat2" parent="YSort" instance=ExtResource( 7 )]
+[node name="Bat2" parent="YSort/Bats" instance=ExtResource( 7 )]
 position = Vector2( 8, 72 )
 
-[node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
+[node name="Bat3" parent="YSort/Bats" instance=ExtResource( 7 )]
 position = Vector2( 200, 152 )
 
 [node name="HealthUI" parent="." instance=ExtResource( 8 )]
