@@ -1,7 +1,7 @@
 extends AnimatedSprite
 
 func _ready():
-	self.connect("animation_finished", self,"_on_animation_finished")
+	var _bind = self.connect("animation_finished", self,"_on_animation_finished")
 	frame = 0
 	play("Animate")
 
